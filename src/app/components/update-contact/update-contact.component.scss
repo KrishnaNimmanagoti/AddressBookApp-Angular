@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0%;
+    font-family: sans-serif;
+}
+
+.address-header{
+   margin-top: 0%;
+}
+
+.header-content{
+    top: 173px;
+    left: 427px;
+    width: 400;
+    height: 73px;
+    background: #008CFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.form-content {
+    padding: 5px;
+}
+
+.card {
+    width: 500px;
+    height: 360px;
+}
+
+.p{
+    margin: -1px 148px -11px;
+    font-size: large;
+}
+
+.cancel-button{
+    top: 214px;
+    left: 1393px;
+    width: 44px;
+    height: 44px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+    margin-top: -8px;
+    margin-left: 85%;
+    
+}
+
+.border {
+    width: 200px;
+    height: 10px;
+    background: #34495e;
+    margin: 40px auto;
+}
+
+.form {
+    max-width: 100px;
+    margin: auto;
+    padding: 0 0px;
+    overflow: hidden;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px 0;
+    border: 0;
+    background: #111;
+    padding: 10px 40px;
+    outline: none;
+    color: #ddd;
+    transition: 0.5s;
+
+}
+
+.input:focus {
+    box-shadow: 0 0 10px 4px #34495e;
+}
+
+textarea.input {
+    resize: none;
+    height: 50px;
+}
+
+.submitButton {
+    float: right;
+    border: 0;
+    background: #34495e;
+    color: #fff;
+    padding: 8px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.submitButton:hover{
+    background: #2980b9;
+}
+
+.select-input{
+
+}
+
+
+

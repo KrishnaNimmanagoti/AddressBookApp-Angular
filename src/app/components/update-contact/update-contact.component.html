@@ -1,0 +1,91 @@
+<form [formGroup]="form" class="form-content" (ngSubmit)="onSubmit()">
+  <mat-card class="card">
+    <div class="address-header">
+      <div class="header-content"><p>Person Address Form</p>
+      <img class="cancel-button" src="../../../assets/logo/cancel.PNG" width="20px" height="20px" (click)="onClick()">
+      </div>
+    </div>
+
+<!-- <div class="form-head">
+        <mat-icon aria-hidden="false" class="form-head-icon" (click)=onClose()>close</mat-icon>
+        <div class="form-head-text">Update Details</div>
+      </div> -->
+
+    <div class="row-content">
+      <label class="label text" for="fullName">Full Name</label>
+      <input class="input" type="text" name="name" id="name" placeholder="Enter your full name here "
+        formControlName="fullName" required [(ngModel)]="fullName">
+      <mat-error fxFlex *ngIf="!form.controls['fullName'].valid && form.controls['fullName'].touched">
+        Invalid Name
+      </mat-error>
+    </div>
+    <div class="row-content">
+      <label class="label text" for="number">Mobile Number</label>
+      <input class="input" type="text" name="phone" id="phone" placeholder="Enter Mobile number" formControlName="phone"
+        required [(ngModel)]="phone">
+      <mat-error fxFlex *ngIf="!form.controls['phone'].valid && form.controls['phone'].touched">
+        Invalid Mobile Number
+      </mat-error>
+    </div>
+    <div class="row-content">
+      <label class="label text" for="email">Email</label>
+      <input class="input" type="email" name="email" id="email" placeholder="Enter Email" formControlName="email"
+        required [(ngModel)]="email">
+      <mat-error fxFlex *ngIf="!form.controls['email'].valid && form.controls['email'].touched">
+        Invalid Email
+      </mat-error>
+    </div>
+    <div class="row-content address-label">
+      <label class="label text" for="address">Address</label>
+      <textarea class="input address-text" type="text" name="address" id="address" placeholder="Enter your address here"
+        formControlName="address" required [(ngModel)]="address"></textarea>
+      <mat-error fxFlex *ngIf="!form.controls['address'].valid && form.controls['address'].touched">
+        Invalid Address
+      </mat-error>
+    </div>
+    <div class="row-content-exp">
+      <div class="select">
+        <label class="label text" for="city">City</label>
+        <select class="select-input" id="city" name="city" formControlName="city" required [(ngModel)]="city">
+          <option value="" selected disabled hidden>Select City</option>
+          <option value="Amaravathi">Amaravathi</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Bhopal">Bhopal</option>
+        </select>
+
+        <label class="label text" for="state">State</label>
+        <select class="select-input" id="state" name="state" formControlName="state" required [(ngModel)]="state">
+          <option value="" selected disabled hidden>Select State</option>
+          <option value="Andhra Pradesh">Andhra Pradesh</option>
+          <option value="Telanagana">Telanagana</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Maharashtra">Maharashtra</option>
+          <option value="Madhya Pradesh">Madhya Pradesh</option>
+        </select>
+        <label class="label text" for="zip">Zip</label>
+        <input class="select-input" type="text" name="zip" id="zip" placeholder="Enter Zip here " formControlName="zip"
+          required [(ngModel)]="zip">
+
+        <mat-error fxFlex *ngIf="!form.controls['city'].valid && form.controls['city'].touched"
+          style="margin-left: 10px;">
+          Invalid City
+        </mat-error>
+        <mat-error fxFlex *ngIf="!form.controls['state'].valid && form.controls['state'].touched">
+          Invalid State
+        </mat-error>
+        <mat-error fxFlex *ngIf="!form.controls['zip'].valid && form.controls['zip'].touched">
+          Invalid Zip
+        </mat-error>
+      </div>
+      <div class="submit-reset">
+        <button type="submit" class="button submitButton submit" id="submitButton" (click)="onSubmit()">Submit</button>
+        <div style="margin-left: 10px;"></div>
+        <button type="button" class="resetButton button reset" (click)="reset()">Reset</button>
+      </div>
+    </div>
+  </mat-card>
+</form>

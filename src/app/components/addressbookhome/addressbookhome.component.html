@@ -18,7 +18,6 @@
         <img src="../assets/icons/add-24px.svg" alt="">Add User</a>
     </div>
 
-
     <table mat-table [dataSource]="contacts" class="mat-elevation-z8" style="width: 80%; margin-left: 150px;">
 
       <ng-container matColumnDef="fullName">
@@ -61,8 +60,7 @@
         <td mat-cell *matCellDef="let element">
           <div fxLayout="row" dir="ltr" fxLayoutGap="3%">
             <img src="../../../assets/icons/delete-black-18dp.svg" alt="" (click)="deleteContact(element.id)">
-            <img src="../../../assets/icons/create-black-18dp.svg" alt=""
-              [routerLink]="['/create-address', element.id]">
+            <img src="../../../assets/icons/create-black-18dp.svg" alt="" (click)="updateContact(element)">
           </div>
         </td>
       </ng-container>

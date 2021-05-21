@@ -1,6 +1,6 @@
 <div class="outerContainer" fxLayout="column" fxLayoutAlign="center center">
     <mat-toolbar>
-        <img class="logo" src="../../../assets/images/addressbook.jpeg" alt="Logo" routerLink=''>
+        <img class="logo" src="../../../assets/logo/book.png" alt="Logo" routerLink=''>
         <div>
             <div class="employee" routerLink=''>ADDRESS</div>
             <div class="payroll" routerLink=''>BOOK</div>
@@ -12,8 +12,8 @@
       <mat-card class="card">
             <div class="address-header">
                 <div class="address-header-content">Person Address Form</div>
-                <a [routerLink]="['/address-list']" routerLinkActive="router-link-active" >
-                  <img class="cancel-button" src="../assets/images/cancel.jpeg"></a>
+                <a [routerLink]="['']" routerLinkActive="router-link-active" >
+                  <img class="cancel-button" src="../../../assets/logo/cancel.PNG"></a>
             </div>
 
             <br><br>
@@ -27,7 +27,7 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="number">Mobile Number</label>
-                <input class="input" type="text" name="mobile" id="mobile" formControlName="mobile" required>
+                <input class="input" type="text" name="mobile" id="mobile" placeholder="Enter Mobile number" formControlName="mobile" required>
                 <mat-error fxFlex
                   *ngIf="!contactDetails.controls['mobile'].valid && contactDetails.controls['mobile'].touched">
                   Invalid Mobile Number
@@ -35,7 +35,7 @@
             </div>
             <div class="row-content">
                 <label class="label text" for="number">Email</label>
-                <input class="input" type="email" name="email" id="email" formControlName="email" required>
+                <input class="input" type="email" name="email" id="email" placeholder="Enter Email"formControlName="email" required>
                 <mat-error fxFlex
                   *ngIf="!contactDetails.controls['email'].valid && contactDetails.controls['email'].touched">
                   Invalid Email
@@ -76,7 +76,7 @@
               </div>
               <div class="oneRow-content">
                 <label class="label text" for="zip">Zip</label>
-                <input class="input" type="text" name="zip" id="zip" formControlName="zip" required>
+                <input class="input" type="text" name="zip" id="zip" placeholder="Enter Zip here " formControlName="zip" required>
               </div>
                 <mat-error fxFlex
                 *ngIf="!contactDetails.controls['city'].valid && contactDetails.controls['city'].touched" style="margin-left: 10px;">

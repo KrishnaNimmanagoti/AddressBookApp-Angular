@@ -18,13 +18,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import { AddressbookhomeComponent } from './components/addressbookhome/addressbookhome.component';
-import { AddContactComponent } from './components/add-contact/add-contact.component'; 
+import { AddContactComponent } from './components/add-contact/add-contact.component';
+import { UpdateContactComponent } from './components/update-contact/update-contact.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddressbookhomeComponent,
-    AddContactComponent
+    AddContactComponent,
+    UpdateContactComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { AddContactComponent } from './components/add-contact/add-contact.compon
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

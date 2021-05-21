@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AddressBookServiceService } from 'src/app/services/address-book-service.service';
+import { MatDialog} from '@angular/material/dialog';
+import { UpdateContactComponent } from '../update-contact/update-contact.component';
+
 
 @Component({
   selector: 'app-addressbookhome',
@@ -16,6 +19,7 @@ export class AddressbookhomeComponent implements OnInit {
   constructor(
     private router: Router,
     private addressService: AddressBookServiceService,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -39,5 +43,14 @@ export class AddressbookhomeComponent implements OnInit {
         console.log("Response is ", response)
         this.reloadData();
       })
+  }
+
+  updateContact(contact: any) {
+    console.log(contact);
+    const dialogRef = this.dialog.open(UpdateContactComponent, {
+      data: {
+        contact
+      }
+    });
   }
 }
